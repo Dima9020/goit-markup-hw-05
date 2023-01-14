@@ -665,18 +665,12 @@ border-top: none;
     visibility: hidden;
     pointer-events: none;
 }
-.modal-close:hover {
+
+.modal-close:active {
     background-color: var(--ocean-btn-color);
 }
 
-.modal-close:hover .modal-close-icon {
-    fill: var(--white-title-color);
-}
-.modal-close:focus {
-    background-color: var(--ocean-btn-color);
-}
-
-.modal-close:focus .modal-close-icon {
+.modal-close:active .modal-close-icon {
     fill: var(--white-title-color);
 }
 .modal-close-icon {
