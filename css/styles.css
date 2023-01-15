@@ -94,7 +94,7 @@ color: var(--blue-btn-color);
     height: 4px;
     background-color: var(--ocean-btn-color);
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     border-radius: 2px;
 }
 .header-link.current {
@@ -550,6 +550,9 @@ border-top: none;
 .portfolio-link:hover .portfolio-top-text {
     transform: translateY(0);
 }
+.portfolio-link:focus .portfolio-top-text {
+    transform: translateY(0);
+}
 /*--------------------CUSTOMERS---------------------*/
 
 .customers {
@@ -606,11 +609,7 @@ border-top: none;
 .customers-link:focus .customers-icon {
     fill: var(--ocean-btn-color);
 }
-.customers-icon {
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 /*---------------MODAL WINDOW--------------------------------*/
 
 .backdrop {
@@ -666,11 +665,11 @@ border-top: none;
     pointer-events: none;
 }
 
-.modal-close:active {
+.modal-close:hover, .modal-close:focus {
     background-color: var(--ocean-btn-color);
 }
 
-.modal-close:active .modal-close-icon {
+.modal-close:hover, .modal-close:focus .modal-close-icon {
     fill: var(--white-title-color);
 }
 .modal-close-icon {
